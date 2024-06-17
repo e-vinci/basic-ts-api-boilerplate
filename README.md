@@ -55,24 +55,28 @@ npm run lint
 ```
 
 
-## Utilisation du debugger et de la configuration de debug offerte
+## Utilisation du debugger
 
+### Utilisation de la configuratin de debug offerte
 Nous vous offrons une configuration de Debug permettant de facilement débugger plusieurs applications au sein d'un même folder de VS Code. Cette configuration se trouve dans le fichier **.vscode/launch.json**.  
 Cette configuration est active au sein de VS Code que si elle se trouve à la racine du folder ouverte dans VS Code. Vous devez donc vous assurer que le dossier **.vscode** et son fichier **launch.json** se trouve au bon endroit. Voici deux scénarios :
 
 - Si vous ouvrez un seul projet au sein de VS Code, c'est-à-dire que le folder ouvert de VS Code est le clone de ce boilerplate) : vous ne devez pas déplacer le répertoire **.vscode**, tout est bien configuré.
 - Si vous ouvrez ou folder de VS Code contenant plusieurs projets, comme par exemple un repository contenant plusieurs API : vous devez déplacer **.vscode** à la racine du folder ouvert dans VS Code.
 
-Si vous avez plusieurs applications au sein d'un folder de VS Code, pour débugger une application en
-particulier, nous vous conseillons cette approche :
+Si vous avez plusieurs applications au sein d'un folder de VS Code, pour débugger une application en particulier, nous vous conseillons cette approche :
 
 - Ouvrez le fichier **package.json** de l'application à débugger ;
-- Cliquez sur l'icône **Run and Debug** à gauche de l'Explorer, puis cliquez sur **Start Debugging**
-  (ou cliquez juste sur **F5**) en vérifiant que la configuration de debugging sélectionnée est bien
-  nommée **Launch via NPM**.
+- Cliquez sur l'icône **Run and Debug** à gauche de l'Explorer, puis cliquez sur **Start Debugging** (ou cliquez juste sur **F5**) en vérifiant que la configuration de debugging sélectionnée est bien nommée **Launch via NPM**.
 
-Nottons que le nom de la configuration de debugging peut facilment être modifiée en changeant la
-valeur de l'attribut **name** dans **/.vscode/launch.json**.
+Nottons que le nom de la configuration de debugging peut facilment être modifiée en changeant la valeur de l'attribut **name** dans **/.vscode/launch.json**.
+
+### Utilisation du debugger TS
+Il existe un autre moyen de débugger son application au sein de VS Code :
+- Veuillez installer l'extension TypeScript Debugger au sein de VS Code;
+- Ensuite, il vous suffit de créer une configuration de Debug (`Add Configuration...`, `TS Debug`) ou vous pouvez sélectionner la configuration offert nommée `ts-node`. Une fois que votre configuration est ouverte après avoir cliqué sur l'onglet de Debug, vous êtes prêt à débugger.
+- Ouvrir le script d'entrée de votre application : `/bin/www.ts`.
+- Cliquez sur `Start Debugging` ou csur `F5` en vérifiant que la configuration de debugging sélectionnée est bien nommée `ts-node` (ou le nom que vous auriez choisi pour la configuration de votre debugger pour TS).
 
 ## Comment ajouter un package ?
 
