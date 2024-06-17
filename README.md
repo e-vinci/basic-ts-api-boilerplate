@@ -1,4 +1,4 @@
-# Boilerplate d'une RESTful API basique
+# Boilerplate d'une RESTful API basique en TS
 
 ## Comment l'utiliser ?
 ### Installation
