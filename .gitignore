@@ -12,4 +12,4 @@ dist/*
 **/data/*.json
 # but (re)include specific dist directory files, e.g.
 #!frontend-essentials/step-1/dist
-build # ignore the build directory
+build 
