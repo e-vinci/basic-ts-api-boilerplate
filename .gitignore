@@ -13,3 +13,9 @@ dist/*
 # but (re)include specific dist directory files, e.g.
 #!frontend-essentials/step-1/dist
 build 
+# ignore all the macOS system files
+.DS_Store
+# ignore all the Windows system files
+Thumbs.db
+# ignore all the Linux system files
+desktop.ini
