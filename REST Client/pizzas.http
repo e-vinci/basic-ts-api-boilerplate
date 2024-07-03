@@ -62,7 +62,7 @@ Content-Type: application/json
 }
 
 ### Update for a pizza which does not exist
-PUT {{baseUrl}}/pizzas/200
+PATCH {{baseUrl}}/pizzas/200
 Content-Type: application/json
 
 {
@@ -70,7 +70,7 @@ Content-Type: application/json
 }
 
 ### Update for a pizza which does not provide any info for a property
-PUT {{baseUrl}}/pizzas/1
+PATCH {{baseUrl}}/pizzas/1
 Content-Type: application/json
 
 {

@@ -128,10 +128,8 @@ router.patch("/:id", (req, res) => {
 
   if (
     (!title && !content) ||
-    (title && !isString(title)) ||
-    (content && !isString(content)) ||
-    (title && !title.trim()) ||
-    (content && !content.trim())
+    (title !== undefined && (!isString(title) || !title.trim())) ||
+    (content !== undefined && (!isString(content) || !content.trim()))
   ) {
     return res.sendStatus(400);
   }
