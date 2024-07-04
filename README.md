@@ -4,9 +4,9 @@
 ### Installation
 - Si vous ne l'avez pas fait, vous pouvez cloner le repo associé au boilerplate pour initier votre application : `git clone https://github.com/e-vinci/basic-ts-api-boilerplate.git` ou `git clone https://github.com/e-vinci/basic-ts-api-boilerplate.git nom-de-votre-projet` pour créer votre projet nommé `nom-de-votre-projet`.
 - **package.json** est le fichier de configuration de votre projet. Veuillez le mettre à jour afin de :
-  - donnnez un nom à votre projet & une description ;
+  - donnez un nom à votre projet & une description ;
   - vous identifier comme auteur.
-- ⚡ Si vous avez cloné votre projet au sein d'un repo existant, Git ne trackera pas ce nouveau projet ; en effet, Git ne tracque pas des projets Git dans des projets Git.
+- ⚡ Si vous avez cloné votre projet au sein d'un repo existant, Git ne traquera pas ce nouveau projet ; en effet, Git ne traque pas des projets Git dans des projets Git.
   Pour vous assurer que Git traque votre nouveau projet imbriqué dans un repo, vous devez effacer le répertoire **.git** se trouvant dans votre nouveau projet. N'hésitez pas aussi à effacer **.gitignore** se trouvant dans votre nouveau projet.
 - Par contre, si vous souhaitez créer un nouveau repo à l'aide de votre boilerplate,
   vous pouvez utiliser le **.gitignore** existant. Vous pouvez aussi éventuellement utiliser le
@@ -21,7 +21,7 @@ npm i # (equivalent de npm install)
 ```
 
 ### Exécution du programme dans un environnement de développement
-- Pour travailler avec un environement de développement confortable offrant un hot reload de votre application à chaque modification de script, il suffit de taper : 
+- Pour travailler avec un environment de développement confortable offrant un hot reload de votre application à chaque modification de script, il suffit de taper : 
 ```shell
 npm run dev
 ```
@@ -38,6 +38,11 @@ npm run tsc
 npm run start
 ```
 
+## Test des opérations offerte par l'API
+- Installez l'extension **REST Client** de VS Code.
+- N'oubliez pas de démarrer l'API : `npm run dev` ou utilisez votre debugger.
+- N'hésitez pas à explorer les requêtes pour voir comment l'API réagit => clic sur `Send Request` au sein de `/tests/pizzas.http` par exemple.
+- Si vous avez besoin de plus d'information sur comment récupérer des données suite à une requête faite via REST Client, n'hésitez pas à lire la documentation : https://github.com/Huachao/vscode-restclient
 
 ## Utilisation du linter et du formatter pour TS
 
@@ -57,26 +62,26 @@ npm run lint
 
 ## Utilisation du debugger
 
-### Utilisation de la configuratin de debug offerte
-Nous vous offrons une configuration de Debug permettant de facilement débugger plusieurs applications au sein d'un même folder de VS Code. Cette configuration se trouve dans le fichier **.vscode/launch.json**.  
+### Utilisation de la configuration de debug offerte
+Nous vous offrons une configuration de Debug permettant de facilement déboguer plusieurs applications au sein d'un même folder de VS Code. Cette configuration se trouve dans le fichier **.vscode/launch.json**.  
 Cette configuration est active au sein de VS Code que si elle se trouve à la racine du folder ouverte dans VS Code. Vous devez donc vous assurer que le dossier **.vscode** et son fichier **launch.json** se trouve au bon endroit. Voici deux scénarios :
 
 - Si vous ouvrez un seul projet au sein de VS Code, c'est-à-dire que le folder ouvert de VS Code est le clone de ce boilerplate) : vous ne devez pas déplacer le répertoire **.vscode**, tout est bien configuré.
 - Si vous ouvrez ou folder de VS Code contenant plusieurs projets, comme par exemple un repository contenant plusieurs API : vous devez déplacer **.vscode** à la racine du folder ouvert dans VS Code.
 
-Si vous avez plusieurs applications au sein d'un folder de VS Code, pour débugger une application en particulier, nous vous conseillons cette approche :
+Si vous avez plusieurs applications au sein d'un folder de VS Code, pour déboguer une application en particulier, nous vous conseillons cette approche :
 
-- Ouvrez le fichier **package.json** de l'application à débugger ;
+- Ouvrez le fichier **package.json** de l'application à déboguer ;
 - Cliquez sur l'icône **Run and Debug** à gauche de l'Explorer, puis cliquez sur **Start Debugging** (ou cliquez juste sur **F5**) en vérifiant que la configuration de debugging sélectionnée est bien nommée **Launch via NPM**.
 
-Nottons que le nom de la configuration de debugging peut facilment être modifiée en changeant la valeur de l'attribut **name** dans **/.vscode/launch.json**.
+Notons que le nom de la configuration de debugging peut facilement être modifiée en changeant la valeur de l'attribut **name** dans **/.vscode/launch.json**.
 
 ### Utilisation du debugger TS
-Il existe un autre moyen de débugger son application au sein de VS Code :
+Il existe un autre moyen de déboguer son application au sein de VS Code :
 - Veuillez installer l'extension TypeScript Debugger au sein de VS Code;
-- Ensuite, il vous suffit de créer une configuration de Debug (`Add Configuration...`, `TS Debug`) ou vous pouvez sélectionner la configuration offert nommée `ts-node`. Une fois que votre configuration est ouverte après avoir cliqué sur l'onglet de Debug, vous êtes prêt à débugger.
+- Ensuite, il vous suffit de créer une configuration de Debug (`Add Configuration...`, `TS Debug`) ou vous pouvez sélectionner la configuration offert nommée `ts-node`. Une fois que votre configuration est ouverte après avoir cliqué sur l'onglet de Debug, vous êtes prêt à déboguer.
 - Ouvrir le script d'entrée de votre application : `/bin/www.ts`.
-- Cliquez sur `Start Debugging` ou csur `F5` en vérifiant que la configuration de debugging sélectionnée est bien nommée `ts-node` (ou le nom que vous auriez choisi pour la configuration de votre debugger pour TS).
+- Cliquez sur `Start Debugging` ou sur `F5` en vérifiant que la configuration de debugging sélectionnée est bien nommée `ts-node` (ou le nom que vous auriez choisi pour la configuration de votre debugger pour TS).
 
 ## Comment ajouter un package ?
 
