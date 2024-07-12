@@ -3,7 +3,6 @@ import { Router } from "express";
 import path from "node:path";
 import { NewPizza, Pizza, PizzaToUpdate } from "../types";
 import { serialize, parse } from "../utils/json";
-// import { isString } from "../utils/type-guards";
 
 const router = Router();
 
