@@ -19,3 +19,5 @@ build
 Thumbs.db
 # ignore all the Linux system files
 desktop.ini
+# ignore the build directory
+build
